@@ -21,9 +21,25 @@
             color: transparent;
             margin: 1rem 0;
         }
+        .blog-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(to right, #E91878, #FC8829);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .blog-button:hover {
+            background: linear-gradient(to right, #D01760, #E06F20);
+        }
         @media (max-width: 600px) {
             .metteko { font-size: 35px; }
             p { font-size: 16px; }
+            .blog-button { font-size: 16px; padding: 8px 16px; }
         }
     </style>
 </head>
@@ -41,6 +57,7 @@
             I enjoy learning about software engineering and cybersecurity.<br>
             Welcome to my personal website, where I share my journey into computer science.
         </p>
+        <a href="blog.html" class="blog-button">Visit My Blog</a>
     </main>
     <script>
         const gradients = [
@@ -52,4 +69,3 @@
     </script>
 </body>
 </html>
-
