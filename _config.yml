@@ -1,14 +1,4 @@
 minima:
-  social_links:
-    - title: Metteko's GitHub
-      icon: github
-      url: "https://github.com/metteko"
-    - title: Metteko's Instagram
-      icon: instagram
-      url: "https://www.instagram.com/ward.vsteenwinkel/"
-    - title: Metteko's Discord
-      icon: discord
-      url: "https://discord.com/users/1051856127295492147" 
   skin: dark  
   title: "metteko.net"
   description: "Personal website of Ward (metteko)."
@@ -19,3 +9,17 @@ minima:
     - index.html
     - blog.html
   permalink: /blog/:title/
+
+social_links:
+  github:
+    title: "Metteko's GitHub"
+    icon: github
+    url: "https://github.com/metteko"
+  instagram:
+    title: "Metteko's Instagram"
+    icon: instagram
+    url: "https://www.instagram.com/ward.vsteenwinkel/"
+  discord:
+    title: "Metteko's Discord"
+    icon: discord
+    url: "https://discord.com/users/1051856127295492147"
