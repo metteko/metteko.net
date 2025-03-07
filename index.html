@@ -1,73 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>metteko.net</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Roboto Mono", monospace;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .metteko {
-            font-size: 80px; 
-            font-weight: 500;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin: 1rem 0;
-        }
-        .blog-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
-            background: none; 
-            border-radius: 5px;
-            transition: filter 0.3s ease;
-        }
-        .blog-button:hover {
-            filter: brightness(0.9); 
-        }
-        @media (max-width: 600px) {
-            .metteko { font-size: 45px; } 
-            p { font-size: 16px; }
-            .blog-button { font-size: 16px; padding: 8px 16px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>metteko.net</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* Reset margins & enable flex layout on body */
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: "Roboto Mono", monospace;
+    }
+
+    /* Main content wrapper */
+    .content {
+      flex: 1;               /* Grow to fill space so footer is at bottom */
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .nav-left a,
+    .nav-right a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 2rem; /* Larger name on the left, adjust as needed */
+    }
+    .nav-right a {
+      font-size: 1.2rem; /* Slightly smaller for the right link */
+    }
+    .nav-left a:hover,
+    .nav-right a:hover {
+      opacity: 0.8;
+    }
+
+    /* Center the main text */
+    main {
+      text-align: center;
+    }
+    .metteko {
+      font-size: 80px;
+      font-weight: 500;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 1rem 0;
+    }
+    .blog-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background: none;
+      border-radius: 5px;
+      transition: filter 0.3s ease;
+    }
+    .blog-button:hover {
+      filter: brightness(0.9);
+      cursor: pointer;
+    }
+
+    /* Footer pinned at bottom */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 2rem; /* Some spacing above footer content */
+    }
+    .footer-icons {
+      margin-bottom: 0.5rem;
+    }
+    .footer-link {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    .footer-link:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      .metteko { font-size: 45px; }
+      p { font-size: 16px; }
+      .blog-button { font-size: 16px; padding: 8px 16px; }
+      .nav-left a { font-size: 1.5rem; }
+      .nav-right a { font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1 class="metteko">metteko.net</h1>
+  <!-- Page Content Container -->
+  <div class="content">
+    <!-- Top Navbar -->
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="/index.html">Ward Van Steenwinkel</a>
+      </div>
+      <div class="nav-right">
+        <a href="/blog/">Blog</a>
+      </div>
     </header>
+
     <main>
-        <p>
-            Hello there! <span>&#128075;</span> My name is Ward, alias metteko.<br>
-            I'm studying Applied Computer Science at <a href="https://www.pxl.be/">PXL University College</a>, Hasselt (BE).<br>
-            Previously, I worked as a chocolatier at my grandfather's atelier. <span>&#127851;</span>
-        </p>
-        <p>
-            I enjoy learning about software engineering and cybersecurity.<br>
-            Welcome to my personal website, where I share my journey into computer science.
-        </p>
-        <a href="/blog/" class="blog-button">Visit My Blog</a>
+      <h1 class="metteko">metteko.net</h1>
+      <p>
+        Hello there! <span>&#128075;</span> My name is Ward, alias metteko.<br />
+        I'm studying Applied Computer Science at
+        <a href="https://www.pxl.be/">PXL University College</a>, Hasselt (BE).<br />
+        Previously, I worked as a chocolatier at my grandfather's atelier.
+        <span>&#127851;</span>
+      </p>
+      <p>
+        I enjoy learning about software engineering and cybersecurity.<br />
+        Welcome to my personal website, where I share my journey into computer science.
+      </p>
+      <a href="/blog/" class="blog-button">Visit My Blog</a>
     </main>
-    <script>
-        const gradients = [
-            'linear-gradient(to right, #E91878, #FC8829)',
-            'linear-gradient(to right, #0088FF, #00EEFF)',
-            'linear-gradient(to right, #931DE7, #df83ee)'
-        ];
-        const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
-        document.querySelector('.metteko').style.backgroundImage = randomGradient;
-        document.querySelector('.blog-button').style.backgroundImage = randomGradient;
-    </script>
+  </div>
+
+  <!-- Footer stays at bottom if content is short -->
+  <footer>
+    <div class="footer-icons">
+      <a href="https://github.com/metteko" class="footer-link">GitHub</a>
+      <a href="mailto:ward.vanst@gmail.com" class="footer-link">Email</a>
+      <a href="https://www.instagram.com/ward.vsteenwinkel/" class="footer-link">Instagram</a>
+    </div>
+    <p>&copy; 2025 Ward Van Steenwinkel</p>
+  </footer>
+
+  <script>
+    const gradients = [
+      'linear-gradient(to right, #E91878, #FC8829)',
+      'linear-gradient(to right, #0088FF, #00EEFF)',
+      'linear-gradient(to right, #931DE7, #df83ee)'
+    ];
+    const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+    document.querySelector('.metteko').style.backgroundImage = randomGradient;
+    document.querySelector('.blog-button').style.backgroundImage = randomGradient;
+  </script>
 </body>
 </html>
