@@ -14,7 +14,7 @@
             text-align: center;
         }
         .metteko {
-            font-size: 60px;
+            font-size: 80px; 
             font-weight: 500;
             -webkit-background-clip: text;
             background-clip: text;
@@ -29,15 +29,15 @@
             font-weight: bold;
             text-decoration: none;
             color: white;
-            background: linear-gradient(to right, #E91878, #FC8829);
+            background: none; 
             border-radius: 5px;
-            transition: background 0.3s ease;
+            transition: filter 0.3s ease;
         }
         .blog-button:hover {
-            background: linear-gradient(to right, #D01760, #E06F20);
+            filter: brightness(0.9); 
         }
         @media (max-width: 600px) {
-            .metteko { font-size: 35px; }
+            .metteko { font-size: 45px; } 
             p { font-size: 16px; }
             .blog-button { font-size: 16px; padding: 8px 16px; }
         }
@@ -57,7 +57,7 @@
             I enjoy learning about software engineering and cybersecurity.<br>
             Welcome to my personal website, where I share my journey into computer science.
         </p>
-        <a href="blog.html" class="blog-button">Visit My Blog</a>
+        <a href="/blog/" class="blog-button">Visit My Blog</a>
     </main>
     <script>
         const gradients = [
@@ -65,7 +65,9 @@
             'linear-gradient(to right, #0088FF, #00EEFF)',
             'linear-gradient(to right, #931DE7, #df83ee)'
         ];
-        document.querySelector('.metteko').style.backgroundImage = gradients[Math.floor(Math.random() * gradients.length)];
+        const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+        document.querySelector('.metteko').style.backgroundImage = randomGradient;
+        document.querySelector('.blog-button').style.backgroundImage = randomGradient;
     </script>
 </body>
 </html>
