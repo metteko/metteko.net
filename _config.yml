@@ -8,10 +8,11 @@ header_pages:
   - blog.html
 
 minima:
-  - title: Metteko's GitHub
-     icon: github
-     url: "https://github.com/metteko"
-  - skin: dark
+  skin: dark
+  social_links:
+    - title: Metteko's GitHub
+      icon: github
+      url: "https://github.com/metteko"
 
 
 # author:
