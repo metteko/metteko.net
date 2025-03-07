@@ -1,9 +1,19 @@
 title: "metteko.net"
 description: "Personal website of Ward (metteko)."
 theme: minima
-skin: auto     
+skin: dark      
 permalink: /blog/:title/
 
 header_pages:
-  - index.md
-  - about.md
+  - index.html
+  - blog.html
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+social_links:
+  github: "https://github.com/metteko"
+  instagram: "https://www.instagram.com/ward.vsteenwinkel/"
+  email: "mailto:ward.vanst@gmail.com"
