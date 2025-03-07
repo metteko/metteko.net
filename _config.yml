@@ -1,3 +1,9 @@
+title: "metteko.net"
+description: "Personal website of Ward (metteko)."
 theme: minima
+skin: auto     
 permalink: /blog/:title/
 
+header_pages:
+  - index.md
+  - about.md
