@@ -10,10 +10,7 @@ permalink: /blog/
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog - metteko.net</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     /* Reset & enable flex layout for pinned footer */
     html, body {
@@ -35,20 +32,19 @@ permalink: /blog/
       padding: 20px;
     }
 
-    /* Navbar (header) */
+    /* Navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 1rem;
     }
-    /* Match index.html approach: same font sizes & spacing */
     .nav-left a,
     .nav-right a {
       text-decoration: none;
       color: black;
       font-weight: bold;
-      font-size: 2rem; /* Larger name on the left */
+      font-size: 2rem; /* Larger name on left */
     }
     .nav-right a {
       font-size: 1.2rem; /* Slightly smaller link on right */
@@ -58,7 +54,7 @@ permalink: /blog/
       opacity: 0.8;
     }
 
-    /* Center the main area (like index.html) */
+    /* Center the main content (like index.html) */
     main {
       text-align: center;
     }
@@ -73,13 +69,13 @@ permalink: /blog/
       margin: 1rem 0;
     }
 
-    /* Post List Styles */
+    /* Post List */
     .post-list {
       list-style: none;
       padding: 0;
-      margin: 0 auto; /* Center the UL itself if desired */
-      max-width: 600px; /* Optional: narrower column for posts */
-      text-align: left; /* Keep the post text left-aligned */
+      margin: 0 auto; /* Keep it centered if you want the same width as the title */
+      text-align: left; /* Switch to left if you want the items left-aligned */
+      max-width: 600px; /* Optional narrower column for reading comfort */
     }
     .post-item {
       margin-bottom: 1rem;
@@ -163,9 +159,7 @@ permalink: /blog/
           <li class="post-item">
             <a href="{{ post.url }}" class="post-link">
               <h2 class="post-title">{{ post.title }}</h2>
-              <span class="post-date">
-                {{ post.date | date: "%B %d, %Y" }}
-              </span>
+              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
               {% if post.description %}
                 <p class="post-description">{{ post.description }}</p>
               {% endif %}
