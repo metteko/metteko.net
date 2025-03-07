@@ -28,6 +28,15 @@ permalink: /blog/
       padding: 20px;
       box-sizing: border-box;
     }
+    .header-container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
     header.navbar a {
       text-decoration: none;
       color: black;
@@ -98,13 +107,16 @@ permalink: /blog/
 <body>
   <!-- Moved header outside the .content container -->
   <header class="navbar">
-    <div class="nav-left">
-      <a href="/index.html">Ward Van Steenwinkel</a>
-    </div>
-    <div class="nav-right">
-      <a href="/blog/">Blog</a>
+    <div class="header-container">
+      <div class="nav-left">
+        <a href="/index.html">Ward Van Steenwinkel</a>
+      </div>
+      <div class="nav-right">
+        <a href="/blog/">Blog</a>
+      </div>
     </div>
   </header>
+  
 
   <div class="content">
     <main>
