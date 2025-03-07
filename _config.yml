@@ -1,18 +1,24 @@
 title: "metteko.net"
 description: "Personal website of Ward (metteko)."
-theme: minima
-skin: dark      
+theme: minima      
 permalink: /blog/:title/
 
 header_pages:
   - index.html
   - blog.html
 
-author:
-  name: Ward Van Steenwinkel
-  email: "ward.vanst@gmail.com"
+minima:
+  - title: Metteko's GitHub
+     icon: github
+     url: "https://github.com/metteko"
+  - skin: dark
 
-social:
-  github: metteko
-  instagram: ward.vsteenwinkel
-  discord: "1051856127295492147"
+
+# author:
+#   name: Ward Van Steenwinkel
+#   email: "ward.vanst@gmail.com"
+
+# social:
+#   github: metteko
+#   instagram: ward.vsteenwinkel
+#   discord: "1051856127295492147"
