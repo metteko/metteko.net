@@ -12,54 +12,39 @@ permalink: /blog/
   <title>Blog - metteko.net</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* Reset & enable flex layout for pinned footer */
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
+    /* Reset & overall layout */
+    html, body { margin: 0; padding: 0; }
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
       font-family: "Roboto Mono", monospace;
     }
-
-    /* Main content container */
+    /* Header: full width */
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    header.navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    .nav-left a { font-size: 2rem; }
+    .nav-right a { font-size: 1.2rem; }
+    header.navbar a:hover { opacity: 0.8; }
+    /* Content container */
     .content {
       flex: 1;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
     }
-
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    .nav-left a,
-    .nav-right a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      font-size: 2rem; /* Larger name on left */
-    }
-    .nav-right a {
-      font-size: 1.2rem; /* Slightly smaller link on right */
-    }
-    .nav-left a:hover,
-    .nav-right a:hover {
-      opacity: 0.8;
-    }
-
-    /* Center the main content (like index.html) */
-    main {
-      text-align: center;
-    }
-
-    /* Blog Title */
+    /* Main content styles */
+    main { text-align: center; }
     .blog-title {
       font-size: 80px;
       font-weight: 500;
@@ -68,18 +53,14 @@ permalink: /blog/
       color: transparent;
       margin: 1rem 0;
     }
-
-    /* Post List */
     .post-list {
       list-style: none;
       padding: 0;
-      margin: 0 auto; /* Keep it centered if you want the same width as the title */
-      text-align: left; /* Switch to left if you want the items left-aligned */
-      max-width: 600px; /* Optional narrower column for reading comfort */
+      margin: 0 auto;
+      text-align: left;
+      max-width: 600px;
     }
-    .post-item {
-      margin-bottom: 1rem;
-    }
+    .post-item { margin-bottom: 1rem; }
     .post-link {
       display: block;
       text-decoration: none;
@@ -88,70 +69,44 @@ permalink: /blog/
       border-radius: 4px;
       transition: background-color 0.2s ease;
     }
-    .post-link:hover {
-      background-color: #f5f5f5;
-      cursor: pointer;
-    }
-    .post-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin: 0;
-    }
-    .post-date {
-      font-size: 0.9rem;
-      font-style: italic;
-      margin: 0.25rem 0;
-    }
-    .post-description {
-      margin: 0.25rem 0;
-      color: #333;
-    }
-
-    /* Footer pinned at bottom */
+    .post-link:hover { background-color: #f5f5f5; cursor: pointer; }
+    .post-title { font-size: 1.2rem; font-weight: 700; margin: 0; }
+    .post-date { font-size: 0.9rem; font-style: italic; margin: 0.25rem 0; }
+    .post-description { margin: 0.25rem 0; color: #333; }
+    /* Footer */
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #555;
       margin-top: 2rem;
     }
-    .footer-icons {
-      margin-bottom: 0.5rem;
-    }
+    .footer-icons { margin-bottom: 0.5rem; }
     .footer-link {
       margin: 0 0.5rem;
       text-decoration: none;
       color: black;
       font-weight: bold;
     }
-    .footer-link:hover {
-      opacity: 0.8;
-    }
-
+    .footer-link:hover { opacity: 0.8; }
     @media (max-width: 600px) {
-      .blog-title {
-        font-size: 45px;
-      }
-      .nav-left a {
-        font-size: 1.5rem;
-      }
-      .nav-right a {
-        font-size: 1rem;
-      }
+      .blog-title { font-size: 45px; }
+      .nav-left a { font-size: 1.5rem; }
+      .nav-right a { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-  <div class="content">
-    <!-- Same navbar as index.html -->
-    <header class="navbar">
-      <div class="nav-left">
-        <a href="/index.html">Ward Van Steenwinkel</a>
-      </div>
-      <div class="nav-right">
-        <a href="/blog/">Blog</a>
-      </div>
-    </header>
+  <!-- Moved header outside the .content container -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="/index.html">Ward Van Steenwinkel</a>
+    </div>
+    <div class="nav-right">
+      <a href="/blog/">Blog</a>
+    </div>
+  </header>
 
+  <div class="content">
     <main>
       <h1 class="blog-title">Blog Posts</h1>
       <ul class="post-list">
@@ -170,7 +125,6 @@ permalink: /blog/
     </main>
   </div>
 
-  <!-- Footer pinned at bottom -->
   <footer>
     <div class="footer-icons">
       <a href="https://github.com/metteko" class="footer-link">GitHub</a>

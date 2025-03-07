@@ -6,52 +6,39 @@
   <title>metteko.net</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
-    /* Reset margins & enable flex layout on body */
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
+    /* Reset & overall layout */
+    html, body { margin: 0; padding: 0; }
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
       font-family: "Roboto Mono", monospace;
     }
-
-    /* Main content wrapper */
+    /* Header: full width */
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    header.navbar a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    .nav-left a { font-size: 2rem; }
+    .nav-right a { font-size: 1.2rem; }
+    header.navbar a:hover { opacity: 0.8; }
+    /* Content container */
     .content {
-      flex: 1;               /* Grow to fill space so footer is at bottom */
+      flex: 1;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
     }
-
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    .nav-left a,
-    .nav-right a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      font-size: 2rem; /* Larger name on the left, adjust as needed */
-    }
-    .nav-right a {
-      font-size: 1.2rem; /* Slightly smaller for the right link */
-    }
-    .nav-left a:hover,
-    .nav-right a:hover {
-      opacity: 0.8;
-    }
-
-    /* Center the main text */
-    main {
-      text-align: center;
-    }
+    /* Main styles */
+    main { text-align: center; }
     .metteko {
       font-size: 80px;
       font-weight: 500;
@@ -68,35 +55,25 @@
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background: none;
       border-radius: 5px;
       transition: filter 0.3s ease;
     }
-    .blog-button:hover {
-      filter: brightness(0.9);
-      cursor: pointer;
-    }
-
-    /* Footer pinned at bottom */
+    .blog-button:hover { filter: brightness(0.9); cursor: pointer; }
+    /* Footer */
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #555;
-      margin-top: 2rem; /* Some spacing above footer content */
+      margin-top: 2rem;
     }
-    .footer-icons {
-      margin-bottom: 0.5rem;
-    }
+    .footer-icons { margin-bottom: 0.5rem; }
     .footer-link {
       margin: 0 0.5rem;
       text-decoration: none;
       color: black;
       font-weight: bold;
     }
-    .footer-link:hover {
-      opacity: 0.8;
-    }
-
+    .footer-link:hover { opacity: 0.8; }
     @media (max-width: 600px) {
       .metteko { font-size: 45px; }
       p { font-size: 16px; }
@@ -107,18 +84,17 @@
   </style>
 </head>
 <body>
-  <!-- Page Content Container -->
-  <div class="content">
-    <!-- Top Navbar -->
-    <header class="navbar">
-      <div class="nav-left">
-        <a href="/index.html">Ward Van Steenwinkel</a>
-      </div>
-      <div class="nav-right">
-        <a href="/blog/">Blog</a>
-      </div>
-    </header>
+  <!-- Moved header outside the .content container -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="/index.html">Ward Van Steenwinkel</a>
+    </div>
+    <div class="nav-right">
+      <a href="/blog/">Blog</a>
+    </div>
+  </header>
 
+  <div class="content">
     <main>
       <h1 class="metteko">metteko.net</h1>
       <p>
@@ -136,7 +112,6 @@
     </main>
   </div>
 
-  <!-- Footer stays at bottom if content is short -->
   <footer>
     <div class="footer-icons">
       <a href="https://github.com/metteko" class="footer-link">GitHub</a>
