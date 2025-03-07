@@ -1,25 +1,18 @@
-minima:
-  skin: dark  
-  title: "metteko.net"
-  description: "Personal website of Ward (metteko)."
-  author:
-    name: Ward Van Steenwinkel
-    email: "ward.vanst@gmail.com"
-  header_pages:
-    - index.html
-    - blog.html
-  permalink: /blog/:title/
+title: "metteko.net"
+description: "Personal website of Ward (metteko)."
+theme: minima
+skin: dark      
+permalink: /blog/:title/
 
-social_links:
-  github:
-    title: "Metteko's GitHub"
-    icon: github
-    url: "https://github.com/metteko"
-  instagram:
-    title: "Metteko's Instagram"
-    icon: instagram
-    url: "https://www.instagram.com/ward.vsteenwinkel/"
-  discord:
-    title: "Metteko's Discord"
-    icon: discord
-    url: "https://discord.com/users/1051856127295492147"
+header_pages:
+  - index.html
+  - blog.html
+
+author:
+  name: Ward Van Steenwinkel
+  email: "ward.vanst@gmail.com"
+
+social:
+  github: metteko
+  instagram: ward.vsteenwinkel
+  discord: "1051856127295492147"
