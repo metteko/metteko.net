@@ -2,6 +2,7 @@ title: "metteko.net"
 description: "Personal website of Ward (metteko)."
 theme: minima      
 permalink: /blog/:title/
+skin: dark
 
 header_pages:
   - index.html
@@ -9,10 +10,10 @@ header_pages:
 
 minima:
   skin: dark
-  social_links:
-    - title: Metteko's GitHub
-      icon: github
-      url: "https://github.com/metteko"
+  # social_links:
+  #   - title: Metteko's GitHub
+  #     icon: github
+  #     url: "https://github.com/metteko"
 
 
 # author:
