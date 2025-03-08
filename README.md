@@ -51,5 +51,5 @@ This file controls how Jekyll builds the blog.
 
 ### `CNAME` (Custom Domain Setup)  
 The `CNAME` file is used to assign a custom domain to the GitHub Pages site.  
-- When GitHub Pages sees this file, it automatically configures the site to be accessible at that domain.
+- When you set up a custom domain in GitHub Pages settings, GitHub internally links your domain (metteko.net) to your repository. This information is stored in GitHub’s internal database.
 
