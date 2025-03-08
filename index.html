@@ -6,7 +6,6 @@
   <title>metteko.net</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
-    /* Reset & overall layout */
     html, body { margin: 0; padding: 0; }
     body {
       display: flex;
@@ -14,7 +13,6 @@
       min-height: 100vh;
       font-family: "Roboto Mono", monospace;
     }
-    /* Header: full width */
     header.navbar {
       display: flex;
       justify-content: space-between;
@@ -39,14 +37,12 @@
     .nav-left a { font-size: 2rem; }
     .nav-right a { font-size: 1.2rem; }
     header.navbar a:hover { opacity: 0.8; }
-    /* Content container */
     .content {
       flex: 1;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
     }
-    /* Main styles */
     main { text-align: center; }
     .metteko {
       font-size: 80px;
@@ -68,7 +64,6 @@
       transition: filter 0.3s ease;
     }
     .blog-button:hover { filter: brightness(0.9); cursor: pointer; }
-    /* Footer */
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -93,7 +88,6 @@
   </style>
 </head>
 <body>
-  <!-- Moved header outside the .content container -->
   <header class="navbar">
     <div class="header-container">
       <div class="nav-left">
