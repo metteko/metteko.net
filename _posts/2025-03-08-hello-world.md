@@ -13,4 +13,4 @@ public class Main {
 }
 ```
 
-A second start to my blog. Let's see if this time, I actually keep posting. Currently working on the first blog post: "HashMap's under the hood". Stay tuned!
+A second start to my blog. Let's see if this time, I actually keep posting. Currently working on the first blog post. Stay tuned!
